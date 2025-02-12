@@ -17,6 +17,9 @@
     grid-column: 1/2;
     color:white;
     padding:16px;
+    display: grid;
+    grid-template-rows: 160px 1fr 1fr;
+    gap:80px
 }
 
 .header {
@@ -70,6 +73,23 @@
 }
 /* Sidebar */
 
+.application-links, .option-links{
+    list-style-type: none;
+    display: grid;
+    gap:8px
+}
+.application-links {
+    grid-template-rows: repeat(6, 40px);
+}
+
+.option-links{
+    grid-template-rows: repeat(3, 40px)
+}
+
+li {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+}
 /* Header*/
 .search {
     grid-row: 1/2;
@@ -95,7 +115,8 @@
     display:flex;
     align-items: center;
     justify-content: flex-end;
-    gap:64px
+    gap:64px;
+    height:40px;
 }
 
 .greeting {
